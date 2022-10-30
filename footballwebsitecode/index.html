@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<!--This specifies the contents language to be english-->
+
+<html lang="en">
+    
+  <!--This head tag and section contains the meta data for the webpage -->
+  
+<head>
+<!--    this utf 8 meta tag is for the encoding of the webpage-->
+  <meta charset="UTF-8">
+    
+<!--    allows the full width of the screen on different devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--    This links the html page to the css stylesheet, allowing the page to be styled-->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+<!--    This allows the title to show up in the tab part of the browser-->
+  <title> Football Magazine Website</title>
+
+</head>
+    
+    
+    
+ 
+    <body>
+
+    
+ <header>
+     
+<!--     This header tag signifies the top part of my page and keeps it away from the body part where the images and text is so it clearly defined.-->
+    
+<!--    CONTAINER FOR THE WHOLE NAV BAR-->
+    
+   <nav>
+<!--    This nav tag contains the whole navigation bar and eveything in it.-->
+       
+<!--       LOGO-->
+    
+<!--    This div section creates an area for is for the logo/ title on my navigation bar -->
+   <div class = "logo">THE FOOTBALL MAGAZINE</div> 
+       
+       
+<!--       BURGER MENU BUTTON-->
+       
+<!--       This code here is for the burger button that appears when the width of the screen get smaller, the lines are for the lines in the burger which is then styled in the css page to actually make it look like a burger and so they have seperate div sections and the burger button has its own section as well-->
+       <a class = "burgerButton">
+       
+       <div class = "line"></div>
+       <div class = "line"></div>
+       <div class = "line"></div>
+
+           
+       </a>   
+           
+           
+<!--       LINKS TO CLICK ON-->
+    
+<!--       this div tag and class is to contain all the navigation links so they are seperate from the main title but are still contained within the actual nav tag-->
+    <div class = "nav-links">
+       
+       <ul>
+<!--        Ive put all the links to other pages in a list and then styled them on the css page, they are in a list so its obvious that they are one after each other on the page-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        
+        
+        
+        </ul>
+       
+       
+       
+       </div>
+    
+
+    </nav> 
+    
+    
+    
+
+    
+    
+
+    
+    </header>
+    
+    
+<!--    body tag used here to contain all the stuff that is  not in the top part of the website or bottom section, contains the main section where pictures and text are.-->
+    
+        
+
+<main>
+           
+           
+<!--     Carousel container contains all the pictures that are going to be showing in the image carousel, it puts them all together so they can be styled to gether and means I can animate them and style them together, puts them all together into one bit.      -->
+
+<div class="carousel-container">
+
+<!--Each image has its own div tag called picture so it allows the carousel to work properly, each image has to be seperate. It means I can style the pictures individually, but also seperate so the carousel they can move because they are seperate things and not one big image together.-->
+    
+<div class="picture">
+<!--Each have an image tag because they are an image and so need to represented as such -->
+  <img class = "first" src="assets/img/homepage/football1.jpg" alt = "football ball placed on grass">
+</div>
+
+<div class="picture">
+  <img class = "first" src="assets/img/homepage/football2.jpg" alt = "football ball on a football pitch with a view of the stadium">
+</div>
+
+<div class="picture">
+  <img class = "first" src="assets/img/homepage/football3.jpg" alt = "white football corner flag lines">
+</div>
+
+
+</div>
+           
+           
+ 
+<!--        Ive used a h1 tag here because its own section it needs to be seperate and also needs to be shown its a title.-->
+        
+                <h1 class = lowertitle>Latest News Articles</h1>
+
+        
+        
+<!--        main container here is for the main bits on the home page, where the news articles are, all the stuff thats not in the image carousel, the pictures text etc, has to be seperate so it can be shown its not in the same section, allows my flex box layout to work in css-->
+        
+                    <div class = "main-container">
+
+        
+        
+        
+        
+        
+        
+<!--        Each text and image is in its own div tag called column because it needs to be seperate and shown as its own block containing its own story on the home page -->
+                        
+                        
+                        
+                        
+                       <div class = "column">
+                           
+                        <img class = "img1" src = "assets/img/homepage/barca.jpg" alt="barcelona fans waving flags in a stadium">
+            
+                           
+<!--                   H2 tag here and in each column  makes the text capitalise, the text needs to be seperate from the image as its styled seperately but has to be in the same bit as the image so its in the column div tag still-->
+                           
+                        <h2>Barcelona win the champions league and dominate again</h2>
+                        
+                        </div>
+                        
+                      <!--        Each text and image is in its own div tag called column because it needs to be seperate and shown as its own block containing its own story on the home page -->  
+                        
+                        <div class = "column">
+                            
+                        <img class = "img2" src = "assets/img/homepage/girona.jpg" alt = "Girona FC stadium with a match being played">
+
+                            <!--                   H2 tag here and in each column  makes the text capitalise, the text needs to be seperate from the image as its styled seperately but has to be in the same bit as the image so its in the column div tag still-->
+                        <h2>Girona FC could sign messi</h2></div>
+                        
+                        
+                        
+                        
+                        <!--        Each text and image is in its own div tag called column because it needs to be seperate and shown as its own block containing its own story on the home page -->
+                        
+                        <div class = "column">
+                            
+                            
+                         <img class = "img3" src = "assets/img/homepage/footballers.jpg" alt ="players of chelsea fc and manchester city, playing a mathc against each other">
+  <!--                   H2 tag here and in each column  makes the text capitalise, the text needs to be seperate from the image as its styled seperately but has to be in the same bit as the image so its in the column div tag still-->
+                            
+                        <h2>Chelsea v Manchester City - Result</h2></div>
+                        
+                        
+                        
+                        <!--        Each text and image is in its own div tag called column because it needs to be seperate and shown as its own block containing its own story on the home page -->
+                        <div class = "column">
+                            
+                        <img class = "img4" src = "assets/img/homepage/premierleague.jpg" alt = "a premier league football stadium with lots of fans">
+
+                            
+                        <h2>Who will win the Premier League this year?</h2></div>
+                        
+                        
+                        <!--        Each text and image is in its own div tag called column because it needs to be seperate and shown as its own block containing its own story on the home page -->
+                        
+                        <div class = "column">
+                            
+                         <img class = "img5" src = "assets/img/homepage/brasil.jpg" alt = "three brasilian fans supporting the brazil national team">
+
+                            <!--                   H2 tag here and in each column  makes the text capitalise, the text needs to be seperate from the image as its styled seperately but has to be in the same bit as the image so its in the column div tag still-->
+                        <h2>Brazil wins the World Cup!</h2></div>
+
+        
+        
+        
+        </div>
+        
+        
+        </main>
+        
+        
+        
+        
+
+
+
+      
+        
+        
+        
+<!--      the footer is seperate from everything else so has to be in its own tag called footer,   -->
+     <footer>
+                 
+        
+<!--        in order to make everything group together, ive put all the tags below into a footer container -->
+		<div class="footer-container">
+	
+<!--            3 sections below within the footer, navigation, company, legal, all have to be shown apart because they represent different things-->
+            
+            
+<!--            this is for the navigation bit for the footer-->
+			<div class="footernav">
+				<h3 class = "footertitles">Navigation</h3> 
+                
+<!--        List tags used for navigation and company and legal, because they need to be easy to see and easy to read, easy to click on for the user-->
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        </ul>
+			</div>
+            
+            
+<!--            This is for the company bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+            <div class="ourcompany">
+				<h3 class = "footertitles">Our Company</h3>
+                <ul>
+				<li><a href="#">Help Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                </ul>
+			</div>
+
+<!--                        This is for the legal bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+            <div class="legal">
+				<h3 class = "footertitles">Legal</h3>
+                <ul>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Cookies</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+                </ul>
+			</div>
+		
+		</div>
+
+	</footer>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--        Means the JS file can be imported so the image carousel and burger menu button work on nav bar-->
+                <script src = "assets/js/main.js" ></script>
+
+    
+         </body>
+   
+        
+</html>  
+        
+        
+        
+        
+        
+        
+        
+        

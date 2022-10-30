@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<!--This specifies the contents language to be english-->
+<html lang="en">
+    
+<!--This head tag and section contains the meta data for the webpage -->
+<head>
+    <!--    this utf 8 meta tag is for the encoding of the webpage-->
+
+  <meta charset="UTF-8">
+    <!--    allows the full width of the screen on different devices-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    This links the html page to the css stylesheet, allowing the page to be styled-->
+
+  <link rel="stylesheet" href="assets/css/footballquiz.css">
+
+<!--    This allows the title to show up in the tab part of the browser-->
+
+  <title> Football Magazine Website</title>
+  
+</head>
+    
+    
+    
+     <body>
+
+    
+    
+    
+ <header>
+     
+<!--     This header tag signifies the top part of my page and keeps it away from the body part where the images and text is so it clearly defined.-->
+    
+<!--    CONTAINER FOR THE WHOLE NAV BAR-->
+    
+   <nav>
+<!--    This nav tag contains the whole navigation bar and eveything in it.-->
+       
+<!--       LOGO-->
+    
+<!--    This div section creates an area for is for the logo/ title on my navigation bar -->
+   <div class = "logo">THE FOOTBALL MAGAZINE</div> 
+       
+       
+<!--       BURGER MENU BUTTON-->
+       
+<!--       This code here is for the burger button that appears when the width of the screen get smaller, the lines are for the lines in the burger which is then styled in the css page to actually make it look like a burger and so they have seperate div sections and the burger button has its own section as well-->
+       <a class = "burgerButton">
+       
+       <div class = "line"></div>
+       <div class = "line"></div>
+       <div class = "line"></div>
+
+           
+       </a>   
+           
+           
+<!--       LINKS TO CLICK ON-->
+    
+<!--       this div tag and class is to contain all the navigation links so they are seperate from the main title but are still contained within the actual nav tag-->
+    <div class = "nav-links">
+       
+       <ul>
+<!--        Ive put all the links to other pages in a list and then styled them on the css page, they are in a list so its obvious that they are one after each other on the page-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        
+        
+        
+        </ul>
+       
+       
+       
+       </div>
+    
+
+    </nav> 
+    
+    
+    
+
+    
+    
+
+    
+    </header>
+    
+    
+        
+    <main>
+    
+<!--    Container and structure for the main title-->
+        
+<!--        This top container seperates the title from the main section.This is so the title can be clearly seperated from the questions and styled seperately in css, as the title has to be bigger and bolder so it needs different styling. This allows it to stand out properly and then explain the content below-->
+        <div class = "top-container">
+            
+<!--            Football Quiz Title is in a h1 tag because its a title, it needs to be capitalised and stand out-->
+        <h1 class = "maintitle"> Football Quiz</h1>
+    </div>
+        
+        
+        
+<!--        HTML for the quiz cards and its contents-->
+    
+<!--    This flexbox container tag contains everything for the quiz details, all the cards, questions and answers-->
+     <div class = "flexbox-container">
+<!--         H2 tag for the subtitle to show its a title and capitalised-->
+      <h2 class = "subtitle"> Click on each card to reveal the answer!</h2>
+
+<!--There are 2 rows in total, flex row 1 and 2. Flex row 1 contains the first 3 questions in the quiz and has to be separate from flex row 2 because it needs to be aligned vertically, we can only do this by having 2 indvidual rows and then using flex box to lay out the items this way vertically. Flex row 2 contains the last 3 questions.-->
+         
+       <div class = "flexrow1">
+           
+<!--           There are three items per row, a flex item for each question, so they can be styled inddividually in css. This allows the question and answer for each question to be styled and put into a curved square. There are 6 items overall.-->
+
+	<div class="flexitem">
+        
+		<div class="item-main">
+			<div class="item-flip front">
+             <h2>Who is the best footballer ever?</h2></div>
+            
+			<div class="item-flip back">
+					<div class="text">
+				        <h2>Pelé</h2></div>
+
+					
+				</div>
+			</div>
+		</div>
+           
+           
+<!--           SECOND QUESTION IN THE ROW-->
+           <div class="flexitem">
+        
+<!--        this div tag, item main is here to contain the two parts to the item, the question and the answer-->
+		<div class="item-main">
+            
+<!--            this tag is for the front of the item, the question, it has to be seperate so the code in css/js knows which part to show when the item is question or answer is clicked-->
+            
+			<div class="item-flip front">
+             <h2>What is the largest football stadium in the world</h2></div>
+            
+<!--            this tag is for the back of the item, the answe, it has to be seperate so the code in css/js knows which part to show when the item is question or answer is clicked-->
+			<div class="item-flip back">
+					<div class="text">
+				        <h2>Camp Nou</h2></div>
+
+				</div>
+			</div>
+		</div>
+           
+<!--           THIRD QUESTION IN THE ROW-->
+           
+           <div class="flexitem">
+        
+		<div class="item-main">
+			<div class="item-flip front">
+             <h2>How many times have Brasil won the world cup?</h2></div>
+            
+			<div class="item-flip back">
+					<div class="text">
+				        <h2>Five Times!</h2></div>
+
+				</div>
+			</div>
+		</div>
+           
+           
+           
+      </div>
+     
+           
+           
+           
+           
+<!--
+           
+           
+There are 2 rows in total, flex row 1 and 2. Flex row 1 contains the first 3 questions in the quiz and has to be separate from flex row 2 because it needs to be aligned vertically, we can only do this by having 2 indvidual rows and then using flex box to lay out the items this way vertically. Flex row 2 contains the last 3 questions.
+           
+-->
+                  <div class = "flexrow2">
+                   
+<!--           There are three items per row, a flex item for each question, so they can be styled inddividually in css. This allows the question and answer for each question to be styled and put into a curved square. There are 6 items overall.-->
+
+	<div class="flexitem">
+        
+		<div class="item-main">
+			<div class="item-flip front">
+              <h2>Who is premier leagues top scorer of all time?</h2></div>
+			<div class="item-flip back">
+					<div class="text">
+				    <h2>Alan Shearer</h2></div>
+
+				</div>
+		</div>
+    </div>
+           
+           
+<!--           SECOND QUESTION IN THE 2nd ROW-->
+           <div class="flexitem">
+        
+		<div class="item-main">
+			<div class="item-flip front">
+             <h2>Who has the most caps for England?</h2></div>
+            
+			<div class="item-flip back">
+					<div class="text">
+				        <h2>Peter Shilton</h2></div>
+
+				</div>
+			</div>
+		</div>
+           
+<!--           THIRD QUESTION IN THE 2nd ROW-->
+           
+           <div class="flexitem">
+        
+		<div class="item-main">
+			<div class="item-flip front">
+             <h2>How many times have England won the world cup?</h2></div>
+            
+			<div class="item-flip back">
+					<div class="text">
+				        <h2>Once!</h2></div>
+
+				</div>
+			</div>
+		</div>
+           
+           
+           
+           
+           
+           
+         
+           
+           
+           
+           
+           
+        
+	</div>
+         
+   
+
+        
+         
+         
+         </div>
+         
+         
+
+
+
+
+    </main>
+    
+    
+    
+    
+    
+        
+       
+        <!--      the footer is seperate from everything else so has to be in its own tag called footer,   -->
+
+     <footer>
+                 
+         
+        <!--        in order to make eveyrthing group together, ive put all the tags below into a footer container -->
+        
+		<div class="footer-container">
+            
+            <!--            3 sections below within the footer, navigation, company, legal, all have to be shown apart because they represent different things-->
+
+<!--            this is for the navigation bit for the footer-->
+
+			<div class="footernav">
+				<h3 class = "footertitles">Navigation</h3> 
+                
+        <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+        <ul>
+            
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>                
+            
+            </ul>
+
+			</div>
+            
+            
+            <!--  This is for the company bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+
+            <div class="ourcompany">
+				<h3 class = "footertitles">Our Company</h3>
+                <ul>
+				<li><a href="#">Help Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>               
+                </ul>
+
+			</div>
+
+            <!--     This is for the legal bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+            <div class="legal">
+				<h3 class = "footertitles">Legal</h3>
+				<ul>
+                <li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Cookies</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+                </ul>
+			</div>
+		
+		</div>
+
+	</footer>
+        
+    
+    
+    
+    
+            <!--        Means the JS file can be imported so the image carousel, burger menu button work on nav bar and the quiz animates correctly-->
+
+    
+
+	<script src="assets/js/footballquiz.js"></script>
+         
+        </body>
+
+    
+    
+    
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<!--This specifies the contents language to be english-->
+
+<html lang="en">
+    
+  <!--This head tag and section contains the meta data for the webpage -->
+  
+<head>
+<!--    this utf 8 meta tag is for the encoding of the webpage-->
+  <meta charset="UTF-8">
+    
+<!--    allows the full width of the screen on different devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--    This links the html page to the css stylesheet, allowing the page to be styled-->
+  <link rel="stylesheet" href="assets/css/footballskills.css">
+
+<!--    This allows the title to show up in the tab part of the browser-->
+  <title> Football Magazine Website</title>
+
+</head>
+    
+    
+    
+     <body>
+
+    
+    
+ <header>
+     
+<!--     This header tag signifies the top part of my page and keeps it away from the body part where the images and text is so it clearly defined.-->
+    
+<!--    CONTAINER FOR THE WHOLE NAV BAR-->
+    
+   <nav>
+<!--    This nav tag contains the whole navigation bar and eveything in it.-->
+       
+<!--       LOGO-->
+    
+<!--    This div section creates an area for is for the logo/ title on my navigation bar -->
+   <div class = "logo">THE FOOTBALL MAGAZINE</div> 
+       
+       
+<!--       BURGER MENU BUTTON-->
+       
+<!--       This code here is for the burger button that appears when the width of the screen get smaller, the lines are for the lines in the burger which is then styled in the css page to actually make it look like a burger and so they have seperate div sections and the burger button has its own section as well-->
+       <a class = "burgerButton">
+       
+       <div class = "line"></div>
+       <div class = "line"></div>
+       <div class = "line"></div>
+
+           
+       </a>   
+           
+           
+<!--       LINKS TO CLICK ON-->
+    
+<!--       this div tag and class is to contain all the navigation links so they are seperate from the main title but are still contained within the actual nav tag-->
+    <div class = "nav-links">
+       
+       <ul>
+<!--        Ive put all the links to other pages in a list and then styled them on the css page, they are in a list so its obvious that they are one after each other on the page-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        
+        
+        
+        </ul>
+       
+       
+       
+       </div>
+    
+
+    </nav> 
+    
+    
+    
+
+
+    
+    
+    
+    </header>
+    
+    
+        
+     <main>
+        
+        
+<!--        this webpage has two sections the top part which contains the title and image and the part below which contains the details about the football skills. This means in order to get the layout required where the title is at the top of the page, Ive put the  title and corresponding image in a div tag called top container -->
+        <div class = "top-container">
+            
+<!--        Ive used the h1 tag here because it contains the title, capitalises it and keeps it in in its own section which allows me to style it in css without affecting the main content-->
+        <h1 class = "maintitle"> 10 Football Skills & How to do them</h1>
+<!--        as there is an image here it needs to be contained in a img tag and the alt text is for the screen reader-->
+        <img src= "assets/img/footballskillspage/footballskills.jpg" alt = "a football player's foot on a football">
+    </div>
+        
+<!--        The main details for the football skills info is contained within flex container, this is so it is seperate from the title and image above and lets me use flex box to position it in the right way-->
+      <div class = "flexcontainer">
+<!--        I've used three div tags called flex row, There are 3 rows for the football skills list, flex row 1, 2 and 3. This is so I can order the list of skills into three items per row and four items for the last row, This ensures the layout looks appropriate because there are 10 items in total. I've then used flex box to fit these items in place.-->
+          
+        <div class = "flexrow1">
+          
+<!--            Each item contains one football skill. Each skill needs to be seperate from each other therefore I have put each one in its own flex item div tag. This allows the text to be seperate and so the users viewing the website can easily read each skill and understand each one   -->
+            
+          <div class = "flexitem"> 
+<!--Within each item is a h1 tag. Ive used a h1 tag to contain the name of each football skill. The h1 tag makes the title stand out because it capitalises the title and keeps it in its own tag away from the description of how to do the football skill. I can also style the title further using css to make it bolder and clearer to read.-->
+ <h2>1. The James Rodriguez:</h2>
+
+<!--within each item is the description of the football skill. As there is a lot of text I have put it within the p tag. Ive used the p tag becasue it puts the text in a paragraph format making it look more professional to the reader and easier to read rather than it being in a long line of text.-->
+ <p> So-called in honour of the Columbian playmaker, this is an effective move designed to buy you some space as you head towards goal.
+
+Here are the key steps:
+
+Run towards goal and then fake to cut inside, making your opponent change direction;
+Cut outside again, controlling the ball with the outside of your foot; and
+Get your shot away.</p>
+</div>
+            
+          <div class = "flexitem">
+    <h2>2. The Cruyff Turn:</h2>
+
+
+ 
+
+<p>Named after the famous Dutch footballer of the 1970s, Johann Cruyff, this manoeuvre not only allows you to open space, but it can also make your opponent look foolish.
+
+Here is how to perform a Cruyff turn:
+
+Receive the ball on your instep and shape as if you were passing to a teammate;
+Transfer your weight to your standing foot;
+Swivel your hips and change direction; and
+    Speed away from your opponent.</p>
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem">
+            
+            
+            
+          <h2>3. Ronaldinho Elastico:</h2>
+
+
+ 
+
+<p>Another move named after one of my favourite players. Ronaldinho, nicknamed the ‘magician’ is a World Cup winner and twice World Footballer of the Year.
+
+This move is all about surprise and technique, and needs a lot of practice. Get your timing right and you’ll use this one over and over.
+
+Dribble towards a defender, slowly, with the ball at your feet. They will hopefully come towards you.
+Nudge the ball with the outside of your feet; and
+In one movement switch to the instep, enabling you to skip past him.
+This is not easy to do, and you may have to spend a lot of time getting used to moving the ball from the outside of your foot to the instep in one motion.
+
+       </p>
+
+
+       
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          
+   
+
+    
+          
+          
+          
+          </div>
+          
+          
+          <!--        I've used three div tags called flex row, There are 3 rows for the football skills list, flex row 1, 2 and 3. This is so I can order the list of skills into three items per row and four items for the last row, This ensures the layout looks appropriate because there are 10 items in total. I've then used flex box to fit these items in place.-->
+   
+        <div class = "flexrow2">
+          
+            <div class = "flexitem">
+            
+            
+            
+            <h2>4. The Rainbow Flick:</h2>
+
+
+ 
+<p>
+Another tough one to perfect, but another trick which looks great when it comes off is the Rainbow Flick (also known as the Lambreta in Brazil).
+
+The trick gets its name from the trajectory of the ball, which travels from back to front in an arc. Getting the ball positioning is key to this trick.
+
+Place one foot in front of the ball with your body slightly angled towards your opponent;
+Then with the back foot roll it up your calf, leaning even more towards your opponent; and.
+Finally, jump and flick the ball over your head in the direction in which you are leaning.
+       </p>
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem">
+            
+            
+            
+                <h2>5. The Griezmann:</h2>
+
+
+ 
+<p>
+Although by no means exclusive to the French World Cup winner and Barcelona forward, this turn and trick has still become synonymous with him.
+
+Again this move is all about close control and balance.
+
+As you approach a defender stand on the ball and tap it forward with the weak foot;
+As your opponent lunges for the ball, take advantage of the fact that he is off balance; and
+Knock it past him with your stronger foot, and move away from him.
+
+       </p>
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem">
+            
+            
+            
+            
+         <h2>6. The Maradona Turn:</h2>
+
+
+
+ <p>
+
+When we talk of the world’s best football skills, you also think of the world’s best footballers who made them possible. With that in mind, we can’t leave out the little Argentinian maestro, Diego Maradona.
+
+The Maradona turn is all about close control, the ability to turn in a complete circle and bamboozling your opponent whilst using both feet.
+
+Start off by placing the sole of your left foot on the ball
+Drag it back whilst pivoting your body
+Release your left foot of the ball and as you complete the half turn, allow your right foot to take over
+Using your right foot, drag the ball out in front of you so you can continue dribbling
+       </p>
+ 
+ 
+
+   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          
+        
+
+          
+
+
+        
+          </div>
+          
+          
+          <!--        I've used three div tags called flex row, There are 3 rows for the football skills list, flex row 1, 2 and 3. This is so I can order the list of skills into three items per row and four items for the last row, This ensures the layout looks appropriate because there are 10 items in total. I've then used flex box to fit these items in place.-->
+          
+        <div class = "flexrow3">
+          
+          
+        <div class = "flexitem-r3">
+            
+            
+            
+               <h2>7. The Chop:</h2>
+
+
+ 
+<p>
+This is a move which is best done at high speed because it will help send your opponent the wrong way. It’s all about shifting the ball from one side of of your body to the other side.
+
+Run towards the defender;
+As they draw near, jump up and land by chopping the ball under your standing leg
+Break away into space with a quick change of pace
+When this is done right, you and the ball will go one way, whilst your opponent is still going the other!
+
+       </p>
+  
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem-r3">
+            
+            
+              <h2>8. The Neymar Rollover Rabona:</h2>
+
+
+ 
+<p>
+This one can be difficult to pull off in a game but if you manage to do so, you’ll probably end up nutmegging your opponent leaving them with their head in the ground trying to hide from embarrassment.
+
+This is why the Neymar Rollover Rabona is one of the contenders for the best football skills to learn.
+
+Put your right foot on top of the ball;
+Roll it across your body to the opposite side;
+Step over it with your left foot;
+Immediately after your step over the ball, use your right foot to tap the ball forward with the laces
+       </p>
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem-r3">
+            
+            
+            
+           <h2>9. The Step-Over Snapback:</h2> 
+
+
+ 
+<p>
+This trick makes it in our list as one of the best football skills to practice because it’s very simple but effective in opening space. It can be done either standing skill or on the run.
+
+With the ball at your feet, lean forward with your weight;
+Using the same foot, roll the ball across your body using the sole of your foot whilst you perform a step over.
+Now use the opposite foot to snap the ball back in the opposite direction, transferring your weight accordingly.
+The key to his move is in the name. It is all about the explosiveness of the move and taking your opponent by surprise.
+       </p>   
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+          <div class = "flexitem-r3">
+              
+              
+<h2>10. The Fake Rabona:</h2>
+
+
+ <p>
+
+As a coach, this is one of the best football skills to teach. Kids love it and they love attempting it in the games.
+
+The Fake Rabona means pretending to kick the ball from behind your standing foot. Here are the steps
+
+Dribble ahead with your body facing forward
+Pretend to perform the Rabona and as you do, bring your left foot in front of the ball
+Now use your right foot to sneak behind and take over by changing the direction of the ball using the laces
+At the same time, you’ll have to swivel your body round so you can take off in the opposite direction
+       </p></div>
+          
+          </div>
+
+
+        
+        
+    
+        
+        </div>  
+        
+        
+        </main>   
+        
+        
+        
+        
+        
+             
+        
+        
+        
+       
+        <!--      the footer is seperate from everything else so has to be in its own tag called footer,   -->
+
+     <footer>
+                 
+         
+        <!--        in order to make eveyrthing group together, ive put all the tags below into a footer container -->
+        
+		<div class="footer-container">
+            
+            <!--            3 sections below within the footer, navigation, company, legal, all have to be shown apart because they represent different things-->
+
+<!--            this is for the navigation bit for the footer-->
+
+			<div class="footernav">
+				<h3 class = "footertitles">Navigation</h3> 
+                
+        <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+        <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>        
+        </ul>
+
+			</div>
+            
+            
+            <!--  This is for the company bit you can see within the footer, again has to he seperate so its easy to see -->
+
+ <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+            <div class="ourcompany">
+				<h3 class = "footertitles">Our Company</h3>
+				<ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>				
+                </ul>
+
+			</div>
+
+            <!--     This is for the legal bit you can see within the footer, again has to he seperate so its easy to see -->
+ <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+            <div class="legal">
+				<h3 class = "footertitles">Legal</h3>
+				<ul>
+                <li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Cookies</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                </ul>
+			</div>
+		
+		</div>
+
+	</footer>
+        
+    
+    
+    
+    
+    
+    <!--        Means the JS file can be imported so the image carousel and the burger menu button works on nav bar-->
+
+        
+                <script src = "assets/js/main.js"></script>
+
+        
+    
+
+      
+    
+        </body>
+
+    
+    
+        
+        
+</html>  
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,849 @@
+
+
+
+/*NAVIGATION BAR CSS CODE*/
+/*////////////////////////*/
+
+*{
+/*    I have used the border box property here so the actual width and height of each element fits the content inside it, this makes it easier to style the    web page because the elements are sized differently */
+    
+    box-sizing: border-box;
+    
+}
+
+body{
+    
+/*    This styles the whole body of the webpage, the margin and padding are 0 because i want the background to fit the entire page without any gaps or spaces, the color is also set to light gray.*/
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgray;
+
+}
+
+
+
+/*The navigation bar*/
+
+nav {
+    
+/*    Here I have used flexbox layout, this allows each of the links on the navbar to be aligned vertically, and the space around property can be used becuase it is a flex layout. This means that each link has enough space arounf it for the user to click and is easier to read. all the text/items in the nav bar are aligned to the center*/
+    
+/*    The navigation bar is black, because of the background color being set to black, the text color is ghost white and font family is serif. The minimum height is set to 9vh because this means that the navigation bar wont get smaller than 9vh even when the browser is really small. So its always going to be viewable by the user. */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: ghostwhite;
+    min-height: 9vh;
+    font-family: serif;
+    
+    
+}
+
+
+
+
+/*The Navigation bar Title*/
+
+.logo {
+    
+/*    Here I have specified the logo element, which contains the title on the navigation bar. The font is 24px large, the letter spacing makes the title stand out and look aesthetically better. The left padding has 17px so it is not to close to the left of the screen*/
+    
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-left: 17px;
+    
+}
+
+
+
+
+
+
+/*This is styling all of the links together, which is in a unordered list tag that contains all the links. this uses flexbox to put them into a row and the space around property so that they have space inbetween each link */
+
+.nav-links ul{
+    
+    
+    display: flex;
+    justify-content: space-around;
+    
+       
+}
+
+
+/*list style none makes sure there is no identation or bullet points next to each of the page links in the nav bar*/
+
+.nav-links li {
+    
+    list-style: none;
+
+}
+
+
+
+/*This is selecting each of the links indivudually by selecting li a. 
+The text color is ghost white, there is letter spacing, no text decoration and font size is 16.5px, this is just making the font and size of each of the nav bar links easy to read and look clear. there is padding of 2rem so there is space between the links. The display is set to block so we can set the display to none when we use the burger menu nav bar*/
+
+.nav-links li a{
+    color: ghostwhite;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-size: 16.5px;
+    padding: 2rem;
+    display: block;
+    
+}
+
+
+
+
+
+
+
+/*HOVER ANIMATION CODE*/
+
+
+/*This is setting the background color of the links to light blue when the mouse hovers over the links */
+
+
+.nav-links li:hover {
+    
+    background-color: lightblue;
+    
+    
+}
+
+/*by default we set the display to none as we only want to see it when the screen is small.*/
+/*the flexbox direction is a column so the lines go into a column making it look like a burger. the top, right, height and weight properties are set to these values so that the lines are big enough for the user to click on but not too big so that it doesnt take up the whole nav bar. The cursor is set to pointer so when the user puts the mouse on the burger button they know they need to click it because it changes to a cursor.*/
+
+.burgerButton {
+    
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 40px;
+    height: 23px;
+    top: 1.4rem;
+    right: 1.1rem;
+    cursor: pointer;
+    
+}
+
+/*here we set the size of the lines that make up the burger button, their color is ghost white and they have a slight border radius so they have a small curve on their edges*/
+
+.burgerButton .line{
+    
+    background-color: ghostwhite;
+    border-radius: 15px;
+    height: 2.9px;
+    width: 100%;
+    
+    
+}
+
+
+/*this is a media query, when the width of the screen is 900px or smaller, we change the title left padding to 15px  and decrease the links padding so that it fits the smaller screen because they are closer together*/
+
+@media (max-width:900px){
+    
+    
+.logo{
+    padding-left: 15px;
+       
+}
+
+
+
+
+
+
+
+
+.nav-links li a{
+    
+    padding: 1rem;
+    
+}
+    
+}
+
+
+
+
+
+/*When the height of the screen is 600px or smaller, the burger button shrinks by setting the top to .5rem and the lines height and width getting smaller*/
+
+
+@media(max-height:600px){
+    
+    .burgerButton{
+        
+        top: .5rem;
+        
+        
+    }
+    
+    .burgerButton .line{
+        
+        height: 2.9px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*When the screen size is 710px or smaller, the burger menu appears and the nav links are only viewable when the button is clicked. The padding at the top of title is 10px so it is more centered in the screen.
+
+*/
+
+@media (max-width: 710px){
+    
+   
+     .logo{
+        
+       padding-top: 10px;
+    }
+    
+    
+    nav {
+        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    
+     .burgerButton{
+        
+        display: flex;
+        
+    }
+    
+    .nav-links {
+        
+        display: none;
+        width: 100%;
+    }
+    
+    
+    
+       .nav-links li{
+            
+            text-align: center;
+    }
+    
+    
+    
+    .nav-links ul{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    
+      .nav-links.active{
+        
+        display: flex;
+    }
+    
+    
+     
+
+    
+    .nav-links li a{
+                
+        padding: 1.5rem;
+            
+    }
+    
+   
+}
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+
+/*BODY - CSS CODE*/
+
+
+
+
+/*this contains the top 10 football skills*/
+.flexcontainer{
+/*    the margin here is because it looks better to have a gap between the top part containing the title and the bottom part containing the football skills  */
+    
+    
+    margin-top: 100px;
+}
+
+
+
+
+/*TOP PART (IMAGE AND TITLE)*/
+
+.top-container{
+    
+/*    flexbox display is used so that the text can be on the left side and img on the right side, in a row. I think this looks better because the title this way doesnt take up too much of the screen. There is space between so the img and title arent pushed against the side of the screen and have some space between them so they dont overlap. the background color is white because it stands out from the grey background below */
+    display: flex;
+    justify-content: space-between;
+        background-color: white;
+
+
+}
+
+
+
+img{
+    
+/*    the img has a margin so it looks more centered on the left side*/
+    
+/*    it has a width and height of 50% of its container, this is so when the screen size changes the img will resize and so will be responsive*/
+
+    margin: 20px;
+    width: 50%;
+    height: 50%;
+
+}
+    
+
+/*this styles the title next to the img*/
+
+.maintitle{
+    
+/*    this font size is large because it needs to be clear what content is shown below
+    
+    the letter spacing is here because it look more asthetically pleasing and makes the title look better.
+    
+    the padding and margins are here because this creates the design I wanted for the title, there are two lines one above and one below the title which makes the title look cleaner and have a nice design rather than it being by itself as just text. 
+    
+    the margins and padding creates the effect of there being space above and below the title so it is centered in its container and there is more white background and this works well with the black font
+    
+    */
+     font-size: 70px;
+     margin-top: 150px;
+    margin-bottom: 200px;
+    letter-spacing: 3px;
+    border-top: 2px solid black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 2px solid black;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+    
+}
+
+
+
+/*MAIN SECTION FOR CONTENT*/
+
+
+
+
+.flexitem{
+    
+/*    the width and height here allows each football skill item to have similat heights and width because some items in the row ahve more content, this min height/width keeps each item looking similar.
+    
+    The border, border radius and font family is for the design of each item to make it look like a rounded square
+    
+    there is a white background because it suits the black text, the padding and margin keeps each football skill item slightly apart so it doesnt look too crammed on the screen
+    
+    
+    
+    */
+    
+    
+    
+    min-width: 400px;
+    min-height: 300px;
+    
+    
+
+    
+    border: 2px solid black;
+    margin: 30px;
+    
+    
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    
+    border-radius: 30px;
+    background-color: white;
+    
+
+}
+
+.flexrow1{
+    
+/*    flexbox is used here because it puts the first 3 footballer items into a row, they are centered so they are more spread out and look better. there is a bottom margin to make sure there is enough space between the rows  */
+    
+ display: flex;
+justify-content: center;
+    
+margin-bottom: 120px;
+}
+
+
+.flexrow2{
+    
+        
+/*    flexbox is used here because it puts the second 3 footballer items into a row, they are centered so they are more spread out and look better. there is a bottom margin to make sure there is enough space between the rows  */
+    
+ display: flex;
+    justify-content: center;
+margin-bottom: 120px;
+
+}
+
+.flexrow3{
+    
+    /*    flexbox is used here because it puts the last 4 footballer items into a row, they are centered so they are more spread out and look better. there is a bottom margin to make sure there is enough space between the row and the bottom of the page  */
+    
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+margin-bottom: 120px;
+
+
+    
+
+}
+
+h2{
+/*    this styles the name of the football skill, it has a larger font so its easy to understand what football skill its describing*/
+    
+    font-size: 25px;
+}
+
+
+/*styling for the items in row 3*/
+
+.flexitem-r3{
+    
+    
+/*    these items have more styling because there are more of them in the 3rd row.
+    
+    the width and height are set here because we dont want the items in this row to be too big because there isnt a lot of room on the screen.
+    
+    there is a margin to keep the items seperate from each other and from the row above
+    
+    
+    
+    
+    */
+
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    min-width: 330px;
+    min-height: 400px;
+    
+    
+   
+    border: 2px solid black;
+    margin: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+    background-color: white;
+
+
+    }
+
+
+
+
+
+/*this changes the styling below if the screen is 1200px or smaller*/
+
+
+
+/*the image margin gets smaller and width decreases to 60% so it fits on the screen*/
+
+@media (max-width: 1200px){
+    
+    img{
+        margin-top: 100px;
+        width: 60%;
+    }
+}
+
+
+
+
+/*if the screen is 1000px or smaller, the below styling happens*/
+
+@media (max-width: 1000px){
+    
+/*    the padding and margin for the image and main title is set to 0px because otherwise the content doesnt fit on the screen. the less margin and padding means the design is responsive.
+    
+    the top container sets the layout to a column because this means the title and image stack on top of each other.
+    
+    */
+    
+    img{
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 100px;
+    }
+    
+    .mainttitle{
+        
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .top-container{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+
+
+    
+    @media (max-width: 700px) {
+        
+        
+/*        this decreases the font size on the screen, this is because the font size needs to be the correct size for a smaller screen and suit the other content which is smaller */
+        
+        .maintitle {
+            
+            font-size: 40px;
+            
+        }
+        
+        
+        .flexitem-r3{
+            
+            font-size: 14px;
+
+        
+        
+    }
+        
+        
+        .flexitem{
+            
+            font-size: 15px;
+        }
+    
+        
+        h2{
+            
+            font-size: 20px;
+        }
+    
+    
+
+
+}
+
+
+
+/*        this decreases the font size on the screen, this is because the font size needs to be the correct size for a smaller screen and suit the other content which is smaller */
+
+@media(max-width:1400px){
+    
+    
+    .flexitem{
+            
+            font-size: 17px;
+        }
+    
+        
+        h2{
+            
+            font-size: 22px;
+        }
+    
+    .flexitem-r3{
+        
+            
+            font-size: 17px;
+        
+    }
+
+}
+
+
+/*this decreases the width of each of the football skills items because we dont want the items to overlap when the screen size gets smaller*/
+
+@media(max-width:1600px){
+    
+        .flextem-r3{
+
+            min-width: 200px;
+    }
+
+
+    .flexitem{
+        
+        min-width: 200px;
+    }
+}
+
+
+
+/*the styling below happens if the screen is 1200px or smaller*/
+
+@media(max-width:1200px){
+    
+    
+/*    the min height for the flex items is 100px because this stops the content overlapping on smaller screen sizes*/
+    
+/*    the rows are set to columns because on screen sizes that have smaller width its not possible to show the items as a row and so need to be shown as a column*/
+    
+    
+    
+    .flexitem-r3{
+                
+    min-height: 100px;
+
+    }
+    
+    
+    .flexitem{
+        
+    min-height: 100px;
+
+    }
+    
+    
+    
+        .flexrow3{
+
+            display: flex;
+            flex-direction: column;
+    }
+    
+    .flexrow2{
+
+            display: flex;
+            flex-direction: column;
+    }
+    
+    .flexrow1{
+
+            display: flex;
+            flex-direction: column;
+    }
+
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER CSS*/
+
+/*Here is the styling for the footer section of all the webpages*/
+
+
+
+
+
+footer {
+    
+/*
+    Here I have set the width and height of the footer to 100%, this means that the footer will decrease in size when the width and height of the screen is smaller and vice versa.
+    
+    I have set a margin at the top of the footer so that it doesnt overlap with the main content on the page and its easy to distinguish between the two.
+    
+    The text in the footer is aligned to the center, as there is not a lot of content in the footer this makes it easy to see and aesthetically pleasing.
+    
+    The background color of the footer is black and the text color is white because this is a accessible color scheme.
+*/
+    
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: ghostwhite;
+   
+}
+
+
+.footer-container{
+    
+/*    I have set the footer to have a flexbox layout as this allows the three sections of the footer which are: legal, our company and navigation to be positioned in three seperate columns. as the content is in a list html tag, I have set the list style to none so there are no bullet points, the text is aligned and content spaced evenly so there is enough space between the footer content for users to click on the links
+    
+    
+    */
+    
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+
+    
+    
+}
+
+
+.footertitles{
+    
+/*    Ive set the font size of the main titles in the footer to 20px so its clear which section contains what links below them, there is padding around the titles, letter spacing and border so that the titles are evenly seperated from each other and from the content below them.
+    
+    
+    
+    */
+    
+font-size: 20px; 
+padding-top: 10px;
+font-family: serif;
+padding-bottom: 30px;
+border-bottom: 0.5px solid lightgray;
+letter-spacing: 1px;
+    
+   
+}
+
+
+
+
+.footer-container li a{
+    
+/*
+    This is the styling for the individual links in the footer - text decoration is set to none so there is no line underneath the link, it looks more professional and stands out better against the black background. the font size is 15px, font sans-serif and grey because it suits the color scheme and rest of of the styling for the website.
+    
+*/
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+    text-decoration: none;
+    
+}
+
+
+.footer-container > * {
+    
+/*    This is the styling for the first children in the footer container, so its for the 3 sections in the footer, nav, legal and company.*/
+    
+/*    They each have a margin so they are spread out*/
+    
+    
+    margin: 20px;
+}
+
+
+
+
+.footernav li {
+    
+/*    The list in the navigation section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+    
+    margin: 30px;
+}
+
+
+.ourcompany li {
+    
+/*    The list in the company section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+
+
+  margin: 30px;
+}
+
+
+
+.legal li {
+    
+    /*    The list in the legal section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+
+    margin: 30px;
+}
+
+
+
+.footer-container li a:hover {
+    
+/*    this styling is here to create a hover effect because the background of the list items change to lightblue when the mouse hovers over the links*/
+    
+    background-color: lightblue;
+    
+    
+}
+
+
+
+/*This styling is here to ensure the Footer text stays in the right position and fits in with a smaller screen */
+
+@media(max-width:720px){
+    
+    
+.footer-container li a{
+    
+    font-size: 11px;
+    
+}
+    
+    
+    
+.footertitles{
+    
+font-size: 14px; 
+
+
+   
+}
+
+
+
+    
+}
+
+
+
+/*the padding left and right here is used because it makes the links velow the titles center in place*/
+.footer-container ul{
+    
+    list-style: none;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

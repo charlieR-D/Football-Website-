@@ -1,0 +1,632 @@
+
+
+
+/*NAVIGATION BAR CSS CODE*/
+/*////////////////////////*/
+
+*{
+/*    I have used the border box property here so the actual width and height of each element fits the content inside it, this makes it easier to style the    web page because the elements are sized differently */
+    
+    box-sizing: border-box;
+    
+}
+
+body{
+    
+/*    This styles the whole body of the webpage, the margin and padding are 0 because i want the background to fit the entire page without any gaps or spaces, the color is also set to light gray.*/
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgray;
+
+}
+
+
+
+/*The navigation bar*/
+
+nav {
+    
+/*    Here I have used flexbox layout, this allows each of the links on the navbar to be aligned vertically, and the space around property can be used becuase it is a flex layout. This means that each link has enough space arounf it for the user to click and is easier to read. all the text/items in the nav bar are aligned to the center*/
+    
+/*    The navigation bar is black, because of the background color being set to black, the text color is ghost white and font family is serif. The minimum height is set to 9vh because this means that the navigation bar wont get smaller than 9vh even when the browser is really small. So its always going to be viewable by the user. */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: ghostwhite;
+    min-height: 9vh;
+    font-family: serif;
+    
+    
+}
+
+
+
+
+/*The Navigation bar Title*/
+
+.logo {
+    
+/*    Here I have specified the logo element, which contains the title on the navigation bar. The font is 24px large, the letter spacing makes the title stand out and look aesthetically better. The left padding has 17px so it is not to close to the left of the screen*/
+    
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-left: 17px;
+    
+}
+
+
+
+
+
+
+/*This is styling all of the links together, which is in a unordered list tag that contains all the links. this uses flexbox to put them into a row and the space around property so that they have space inbetween each link */
+
+.nav-links ul{
+    
+    
+    display: flex;
+    justify-content: space-around;
+    
+       
+}
+
+
+/*list style none makes sure there is no identation or ullet point next to each of the page links in the nav bar*/
+
+.nav-links li {
+    
+    list-style: none;
+
+}
+
+
+
+/*This is selecting each of the links indivudually by selecting li a. 
+The text color is ghost white, there is letter spacing, no text decoration and font size is 16.5px, this is just making the font and size of each of the nav bar links easy to read and look clear. there is padding of 2rem so there is space between the links. The display is set to block so we can set the display to none when we use the burger menu nav bar*/
+
+.nav-links li a{
+    color: ghostwhite;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-size: 16.5px;
+    padding: 2rem;
+    display: block;
+    
+}
+
+
+
+
+
+
+
+/*HOVER ANIMATION CODE*/
+
+
+/*This is setting the background color of the links to light blue when the mouse hovers over the links */
+
+
+.nav-links li:hover {
+    
+    background-color: lightblue;
+    
+    
+}
+
+/*by default we set the display to none as we only want to see it when the screen is small.*/
+/*the flexbox direction is a column so the lines go into a column making it look like a burger. the top, right, height and weight properties are set to these values so that the lines are big enough for the user to click on but not too big so that it doesnt take up the whole nav bar. The cursor is set to pointer so when the user puts the mouse on the burger button they know they need to click it because it changes to a cursor.*/
+
+.burgerButton {
+    
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 40px;
+    height: 23px;
+    top: 1.4rem;
+    right: 1.1rem;
+    cursor: pointer;
+    
+}
+
+/*here we set the size of the lines that make up the burger button, their color is ghost white and they have a slight border radius so they have a small curve on their edges*/
+
+.burgerButton .line{
+    
+    background-color: ghostwhite;
+    border-radius: 15px;
+    height: 2.9px;
+    width: 100%;
+    
+    
+}
+
+
+/*this is a media query, when the width of the screen is 900px or smaller, we change the title left padding to 15px  and decrease the links padding so that it fits the smaller screen because they are closer together*/
+
+@media (max-width:900px){
+    
+    
+.logo{
+    padding-left: 15px;
+       
+}
+
+
+
+
+
+
+
+
+.nav-links li a{
+    
+    padding: 1rem;
+    
+}
+    
+}
+
+
+
+
+
+/*When the height of the screen is 600px or smaller, the burger button shrinks by setting the top to .5rem and the lines height and width getting smaller*/
+
+
+@media(max-height:600px){
+    
+    .burgerButton{
+        
+        top: .5rem;
+        
+        
+    }
+    
+    .burgerButton .line{
+        
+        height: 2.9px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*When the screen size is 710px or smaller, the burger menu appears and the nav links are only viewable when the button is clicked. The padding at the top of title is 10px so it is more centered in the screen.
+
+*/
+
+@media (max-width: 710px){
+    
+   
+     .logo{
+        
+       padding-top: 10px;
+    }
+    
+    
+    nav {
+        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    
+     .burgerButton{
+        
+        display: flex;
+        
+    }
+    
+    .nav-links {
+        
+        display: none;
+        width: 100%;
+    }
+    
+    
+    
+       .nav-links li{
+            
+            text-align: center;
+    }
+    
+    
+    
+    .nav-links ul{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    
+      .nav-links.active{
+        
+        display: flex;
+    }
+    
+    
+     
+
+    
+    .nav-links li a{
+                
+        padding: 1.5rem;
+            
+    }
+    
+   
+}
+
+
+/*//////////////////////////////////////////////*/
+
+/*BODY - CSS CODE*/
+
+
+
+
+
+.main-container{
+    
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+.column{
+    flex: 1 1 10em;
+    background-color: white;
+    min-width: 450px;
+    min-height: 300px;
+    
+    max-height: 600px;
+    max-width: 800px;
+    border: 2px solid grey;
+    margin: 20px;
+    
+    
+}
+
+h2{
+    
+    font-size: 31px;
+    font-family: sans-serif;
+    text-align: left;
+    padding-left: 15px;
+    color: dark
+    
+}
+
+/*the img has a width and height set to 100 and 80% of its container, this is so when the screen gets smaller the image with resize itself to fit the container and wont take up too much of the screen.*/
+
+.img1{
+    
+    width: 100%;
+    height: 80%;
+}
+
+/*the img has a width and height set to 100 and 80% of its container, this is so when the screen gets smaller the image with resize itself to fit the container and wont take up too much of the screen.*/
+.img2{
+    
+    width: 100%;
+        height: 80%;
+
+}
+
+/*the img has a width and height set to 100 and 80% of its available space, this is so when the screen gets smaller the image with resize itself to fit the space and wont take up too much of the screen. The object fit is set to cover which means the image will cover its container.  */
+.img3{
+    
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    
+}
+
+/*the img has a width and height set to 100 and 80% of its available space, this is so when the screen gets smaller the image with resize itself to fit the space and wont take up too much of the screen. The object fit is set to cover which means the image will cover its container.  */
+.img4{
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+/*the img has a width and height set to 100 and 80% of its available space, this is so when the screen gets smaller the image with resize itself to fit the space and wont take up too much of the screen. The object fit is set to cover which means the image will cover its container.  */
+.img5{
+    
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.lowertitle{
+    
+/*    This is the styling for the title "Latest News Articles"*/
+    
+/*    there are border and padding properties set here to create a small white background behind the text, this makes it easy to see and distinguishes it from the content below and the image carousel above.*/
+    
+/*    the font size is large and the there is letter spacing as the title needs to stand out against the images on the homepage and other content.*/
+    
+    display: flex;
+   font-size: 50px;
+    justify-content: center;
+    margin-top: 150px;
+    letter-spacing: 3px;
+    border-top: 2px solid black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 2px solid black;
+    background-color: white;
+
+}
+
+
+
+
+/*Image Carousel*/
+/*///////////////*/
+
+
+
+
+.first{
+    
+/*    this is the styling for each of the images in the carousel*/
+    
+    
+/*    A max height is set so the images dont take up the whole screen*/
+    
+/*    The width is set to 1600px as this fits the screen */
+    
+/*    the images are set to cover so that they display correctly because the correct perspective of the image can be seen*/
+
+    
+    max-height: 750px;
+    width: 1867px;
+    object-fit: cover;
+
+    
+
+    
+}
+
+
+/*this is the styling for the section that contains all the stuff related to the carousel*/
+
+.carousel-container{
+    
+/*    max-width/height is set so the carousel doesnt take up the whole screen and is fully responsive when the screen size changes. the position is relative, so it doesnt move on the screen */
+    
+  max-width: 1600px;
+    
+  max-height: 600px;
+    
+    
+    
+    
+  position: relative;
+}
+
+
+
+/*when the screen size is 1800px or smaller, the width of each of the images in the img carousel is set to 100%. This allows the images to decrease when the screen size gets smaller*/
+
+@media(max-width:1800px){
+    
+    .first{
+        
+        max-width: 100%;
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER CSS*/
+
+/*Here is the styling for the footer section of all the webpages*/
+
+
+
+
+
+footer {
+    
+/*
+    Here I have set the width and height of the footer to 100%, this means that the footer will decrease in size when the width and height of the screen is smaller and vice versa.
+    
+    I have set a margin at the top of the footer so that it doesnt overlap with the main content on the page and its easy to distinguish between the two.
+    
+    The text in the footer is aligned to the center, as there is not a lot of content in the footer this makes it easy to see and aesthetically pleasing.
+    
+    The background color of the footer is black and the text color is white because this is a accessible color scheme.
+*/
+    
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: ghostwhite;
+   
+}
+
+
+.footer-container {
+    
+/*    I have set the footer to have a flexbox layout as this allows the three sections of the footer which are: legal, our company and navigation to be positioned in three seperate columns. as the content is in a list html tag, I have set the list style to none so there are no bullet points, the text is aligned and content spaced evenly so there is enough space between the footer content for users to click on the links
+    
+    
+    */
+    
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+
+    
+    
+}
+
+
+.footertitles{
+    
+/*    Ive set the font size of the main titles in the footer to 20px so its clear which section contains what links below them, there is padding around the titles, letter spacing and border so that the titles are evenly seperated from each other and from the content below them.
+    
+    
+    
+    */
+    
+font-size: 20px; 
+padding-top: 10px;
+font-family: serif;
+padding-bottom: 30px;
+border-bottom: 0.5px solid lightgray;
+letter-spacing: 1px;
+    
+   
+}
+
+
+
+
+.footer-container li a{
+    
+/*
+    This is the styling for the individual links in the footer - text decoration is set to none so there is no line underneath the link, it looks more professional and stands out better against the black background. the font size is 15px, font sans-serif and grey because it suits the color scheme and rest of of the styling for the website.
+    
+*/
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+    text-decoration: none;
+}
+
+
+.footer-container > * {
+    
+/*    This is the styling for the first children in the footer container, so its for the 3 sections in the footer, nav, legal and company.*/
+    
+/*    They each have a margin so they are spread out*/
+    
+    
+    margin: 20px;
+}
+
+
+
+
+.footernav li {
+    
+/*    The list in the navigation section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+    
+    margin: 30px;
+}
+
+
+.ourcompany li {
+    
+/*    The list in the company section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+
+
+  margin: 30px;
+}
+
+
+
+.legal li {
+    
+    /*    The list in the legal section has a margin, so each of the links are seperated and easy to click on individually in order to stop misclicking */
+
+    margin: 30px;
+}
+
+
+
+.footer-container li a:hover {
+    
+/*    this styling is here to create a hover effect because the background of the list items change to lightblue when the mouse hovers over the links*/
+    
+    background-color: lightblue;
+    
+    
+}
+
+
+
+/*This styling is here to ensure the Footer text stays in the right position and fits in with a smaller screen */
+
+@media(max-width:720px){
+    
+    
+.footer-container li a{
+    
+    font-size: 11px;
+    
+}
+    
+    
+    
+.footertitles{
+    
+font-size: 14px; 
+
+
+   
+}
+
+
+    
+}
+
+
+
+
+
+
+/*the padding left and right here is used because it makes the links velow the titles center in place*/
+.footer-container ul{
+    
+    list-style: none;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+
+
+
+
+

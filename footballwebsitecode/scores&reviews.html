@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<!--This specifies the contents language to be english-->
+<html lang="en">
+    
+<!--This head tag and section contains the meta data for the webpage -->
+<head>
+    <!--    this utf 8 meta tag is for the encoding of the webpage-->
+
+  <meta charset="UTF-8">
+    <!--    allows the full width of the screen on different devices-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    This links the html page to the css stylesheet, allowing the page to be styled-->
+
+  <link rel="stylesheet" href="assets/css/scores&reviews.css">
+
+<!--    This allows the title to show up in the tab part of the browser-->
+
+  <title> Football Magazine Website</title>
+  
+</head>
+    
+    
+    
+ 
+<body>
+
+    
+    
+ <header>
+     
+<!--     This header tag signifies the top part of the page and keeps it away from the body part where the images and text is so it clearly defined.-->
+    
+<!--    CONTAINER FOR THE WHOLE NAV BAR-->
+    
+   <nav>
+<!--    This nav tag contains the whole navigation bar and eveything in it.-->
+       
+<!--       LOGO-->
+    
+<!--    This div section creates an area for is for the logo/ title on my navigation bar -->
+   <div class = "logo">THE FOOTBALL MAGAZINE</div> 
+       
+       
+<!--       BURGER MENU BUTTON-->
+       
+<!--       This code here is for the burger button that appears when the width of the screen get smaller, the lines are for the lines in the burger which is then styled in the css page to actually make it look like a burger and so they have seperate div sections and the burger button has its own section as well-->
+       <a class = "burgerButton">
+       
+       <div class = "line"></div>
+       <div class = "line"></div>
+       <div class = "line"></div>
+
+           
+       </a>   
+           
+           
+<!--       LINKS TO CLICK ON-->
+    
+<!--       this div tag and class is to contain all the navigation links so they are seperate from the main title but are still contained within the actual nav tag-->
+    <div class = "nav-links">
+       
+       <ul>
+<!--        Ive put all the links to other pages in a list and then styled them on the css page, they are in a list so its obvious that they are one after each other on the page-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        
+        
+        
+        </ul>
+       
+       
+       
+       </div>
+    
+
+    </nav> 
+    
+    
+    
+
+    
+    
+
+    
+    </header>
+    
+    
+        
+        
+     <main>
+        
+        
+<!--
+        
+   This div tag here allows me to put the news articles into one section and seperates them from the other stuff in the body, all the socres and reviews details are within this container and can all be styled in css using flex box because they are contained in this one section, allowing for the layout of a news article   
+-->
+<div class = "container">
+    
+<!--     The scores and reviews title has to be in its own div class called title, so its not immediately  next to the content and so can be  easily seen as a title, and up above everything else-->
+    <div class = "title"> Scores & Reviews</div>
+    
+
+    
+<!--        There are two sections, the man utd v liverppol result and croatia v england result, the flex box section 1, shows that there is one section/box for the first result and another section for the croatia v england result, it effectively seperates the two.-->
+    <div class = "flexbox section1">
+        
+
+    
+        
+    <!--    Ive done a left and right section so in css I can style the two parts into a column using flex box which allows the layout to look like a newspaper article-->
+    <div class = "leftsection">
+        
+
+        
+<!--    Ive put the img into an img tag because its an image and so has to be clearly degined as such, it also has alt text for the screen reader. -->
+        
+    <img class = "img1" src = "assets/img/scores&reviewspage/footballgame1.jpg" alt= "Wembley stadium showing a match between Croatia and England">
+        
+<!--    Ive put the title into a h2 class to make sure its capitalised and stands out from the normal text, -->
+        
+    <h2 class = subtitle>England's Winning Lineup</h2>
+        
+<!--
+    Ive put a even smaller h3 tag for the other subtitle because I wanted them stand out than the normal text but still be a bit smaller than the h2 title above
+        
+-->
+    <h3>England (4-2-3-1): </h3>
+        
+<!--        Ive used p tags here because i wanted the text to be in a paragraph format and rather than the text be seperate, be together in a paragraph so it looks professional like an article -->
+        
+        <p>1 Jordan Pickford (Everton); 2 Kyle Walker (Manchester City), 5 John Stones (Manchester City), 15 Tyrone Mings (Aston Villa), 12 Kieran Trippier (Atletico Madrid); 14 Kalvin Phillips (Leeds United), 4 Declan Rice (West Ham United); 20 Phil Foden (Manchester City), 19 Mason Mount (Chelsea), 10 Raheem Sterling (Manchester City); 9 Harry Kane (Tottenham Hotspur).
+
+ 
+    </p>
+        <h3>Substitutes:</h3>
+        <p>11 Marcus Rashford (Manchester United) for Foden 70’, 26 Jude Bellingham (Borussia Dortmund) for Kane 82’, 18 Dominic Calvert-Lewin (Everton) for Sterling 90+2’</p>
+  
+     </div>
+        
+        
+    <!--    Ive done a left and right section so in css I can style the two parts into a column usuing flex box which allows the layout to look like a newspaper article-->
+    <div class = "rightsection">
+    <h1>Croatia V England</h1>
+    <p class = "result">Result: 0 - 1</p>
+    <h2 class = subtitle>How was the performance?</h2>
+        
+    <!--        Ive used p tags here because i wanted the text to be in a paragraph format and rather than the text be seperate, be together in a paragraph so it looks professional like an article -->
+    <p>Raheem Sterling’s first major tournament goal fired England to a 1-0 victory over Croatia at Wembley in their UEFA EURO 2020 opener. 
+
+The Manchester City winger put England in front just before the hour mark after fine work from Kalvin Phillips as they won their opening game in a European Championships for the first time to go top of Group D. 
+
+England enjoyed the better of the opening passages but had to wait until the second half to break the deadlock against the side who knocked them out of the 2018 World Cup at the semi-final stage. 
+
+Gareth Southgate had made the decision to play Kieran Trippier at left-back, while Declan Rice and Phillips set up as a midfield two to protect the England defence.  Sterling was selected on the left and he threatened early and often for England, before breaking his major tournament duck in the second half. 
+
+England started very strongly, with Phil Foden hitting the inside of the post after just five minutes after cutting inside from the right. 
+
+ 
+        </p>
+        
+        <p>
+The hosts were piling on the pressure as their high press starved Croatia and, particularly skipper Luka Modric, of time on the ball. That allowed England to dominate possession and territory, with the first ten minutes proving particularly fruitful. 
+
+Sterling and Foden combined on the counter, with the younger Manchester City man opening up his body and curling the ball with his left foot. It took a slight deflection of Josko Gvardiol, and that was enough to push it onto the inside of the post and away with Dominik Livakovic beaten. 
+
+Shortly after, it was Sterling and Mason Mount who produced some nice interplay to put Sterling into space in the box, Duje Caleta-Car getting back this time but conceding the corner. 
+
+From that set-piece, Phillips reacted quickly when a ball came out to the edge of the box and Livakovic had to get down sharply to parry away his fizzing shot. 
+
+Croatia had found themselves on the back foot, but after struggling to find their feet in the first 20 minutes, they were able to push forwards thereafter as the pace of the game dropped in the heat. </p>
+        
+        <p>
+Right-back Sime Vrsaljko was proving dangerous, with Tyrone Mings having to be alert to head clear a cross from the Atletico Madrid man. 
+
+Croatia continued to channel their attacks down the right, while Modric’s influence grew as the game went on. 
+
+And yet it was England who had the last chance of the half. It came after Caleta-Car had handled the ball as Sterling was fastest to a long ball through. He was yellow-carded and Trippier attempted to the repeat the trick of the World Cup semi-final three years ago, but his free-kick from the edge of the box could not quite clear the head of Ivan Perisic in the wall. 
+
+Croatia looked comfortable after the break, with Modric trying his luck from distance but Jordan Pickford dealt with it comfortably. 
+
+And just before the hour England finally found a way through the Croatia defence. Sterling had just been denied on a through-ball but second time around he made no mistake. Kyle Walker slid the ball through to Phillips who cut inside one man and then put the through-ball to Sterling who fired past Livakovic with a first-time strike on his right.</p>
+
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--        There are two sections, the man utd v liverppol result and croatia v england result, the flex box section 2, shows that there is one section/box for the first result and another section for the croatia v england result, it effectively seperates the two.-->
+    
+    <div class = "flexbox section2">
+        
+        
+        <!--    Ive done a left and right section so in css I can style the two parts into a column usuing flex box which allows the layout to look like a newspaper article-->
+    <div class = "leftsection2">    
+        
+<!--        I wanted Liverpool v Man Utd to be a big title and capitalised, so i put it into a h1 tag-->
+    <h1>Liverpool V Man Utd</h1>
+        
+<!--        I put the result part of the text into a p class because I didnt want it to be a part of the paragraph, I wanted it to be a normal bit of text however still not a title as its not as important as a title.-->
+    <p class  = "result">Result: 5 - 0</p>
+    <h2 class = "subtitle">The Performance</h2>
+
+<!--        Ive used a few p tags here because I wanted the text to be broken up rather than in one huge part of text-->
+    <p>
+
+Liverpool delivered an annihilation job on Manchester United on Sunday evening, battering the hosts 5-0 at Old Trafford in a game that saw pressure mount further on under-fire manager Ole Gunnar Solsjkaer.
+The Norwegian could only watch on dismayed as the Merseyside side carved his Red Devils to shreds, and a hat-trick from Mohamed Salah provided the prime highlight of an incredible game of football, for one side at least.
+Jurgen Klopp's side arrived with attacking intent; and they were one up within five minutes, Salah turning provider for Naby Keita to slide beyond a hapless David de Gea.
+        
+        </p>
+        
+        <!--        Ive used p tags here because i wanted the text to be in a paragraph format and rather than the text be seperate, be together in a paragraph so it looks professional like an article -->
+        
+    <p>It would go from bad to worse eight minutes later; a defensive miscommunication between compatriots Luke Shaw and Harry Maguire paved the way for Keita to feed Trent Alexander-Arnold, who found the returning Diogo Jota sliding in at the back stick to double Liverpool's cushion.
+Salah notched the first for his own tally on 38 minutes, with Klopp's men slicing the hosts apart: Roberto Firmino, Jota, Keita sliding it across, and the Egyptian beat Victor Lindelof to the cross at the near post for 3-0.
+        
+        
+        He then doubled his winnings on the stroke of half time; kamikaze United defending from a harmful Liverpool throw, with Lindelof, Maguire and Shaw all sucked in by the ball, and Firmino turned the tight-marking United captain and fed his talismanic right winger, who did the rest. Four.
+Cristiano Ronaldo was fortunate not to be sent off for kicking out at substitute Curtis Jones before the break, and United's poor discipline would be a recurring theme later on in the match, with Paul Pogba himself given his marching orders for a dangerous challenge on Keita after a VAR intervention.
+        
+        
+        </p>
+  
+     </div>
+        <!--    Ive done a left and right section so in css I can style the two parts into a column usuing flex box which allows the layout to look like a newspaper article-->
+     <div class = "rightsection2"> 
+         
+<!--        Ive put the img into an img tag because its an image and so has to be clearly defined as such, it also has alt text for the screen reader. -->
+<!--         Its also in a class, so in css I can style this img and any other img classes like this one in the same way-->
+    <img class = "img2" src = "assets/img/scores&reviewspage/footballgame2.jpg" alt = "three manchester utd players looking upset after a defeat">
+    <h2 class = "subtitle">MAN OF THE MATCH - MOHAMED SALAH, LIVERPOOL</h2>
+    <p>The Egyptian wizard struck gold with a magical three to silence Old Trafford.
+A complete performance where he tormented Luke Shaw and Harry Maguire, exploiting every blade of grass between them in that dangerous right half-space he loves to work in with that left boot.
+He was in the right place at the right time whenever he was needed, and he was instrumental in the build-up play to produce a complete, world-class performance.
+There's nothing he can't do right now.</p>
+    <h3>TALKING POINT - MAN UNITED MISERY, SALAH SUBLIME</h3>
+    <p>
+The home side were dismal, but take nothing away from Liverpool.
+Klopp has masterminded an incredible strategy with an unbelievable side. They deserve everything they got today, and they were fabulous throughout.
+The changes Klopp made pre-match were excellent, with Ibrahima Konate and Jota brilliant throughout.
+But it was all about Salah, as he compounded United's woes, exploiting every defensive error made to seal a dream day for every Liverpudlian red.</p>
+    </div>
+    
+    </div>
+    
+ 
+    
+    
+    
+    
+    </div>
+         
+         </main>   
+ 
+       
+
+      
+        
+        
+        
+       
+        <!--      the footer is seperate from everything else so has to be in its own tag called footer,   -->
+
+     <footer>
+                 
+         
+        <!--        in order to make eveyrthing group together, ive put all the tags below into a footer container -->
+        
+		<div class="footer-container">
+            
+            <!--            3 sections below within the footer, navigation, company, legal, all have to be shown apart because they represent different things-->
+
+<!--            this is for the navigation bit for the footer-->
+
+			<div class="footernav">
+				<h3 class = "footertitles">Navigation</h3> 
+                
+        <!--        List tags used for navigation and company and legal, because they need to be easy to see and easy to read, easy to click on for the user-->
+                
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="footballquiz.html">Football Quiz</a></li>
+       <li><a href="footballskills.html">Football Skills</a></li>
+       <li><a href="scores&reviews.html">Scores & Reviews</a></li>
+       <li><a href="top5footballersineurope.html">Top 5 Footballers in Europe</a></li>
+        </ul>
+			</div>
+            
+            
+            <!--  This is for the company bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+
+            <div class="ourcompany">
+				<h3 class = "footertitles">Our Company</h3>
+				<ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                </ul>
+			</div>
+
+            <!--     This is for the legal bit you can see within the footer, again has to he seperate so its easy to see -->
+             <!--        List tags used for navigation, company and legal sections, because they need to be easy to see and easy to read, easy to click on for the user-->
+
+            <div class="legal">
+				<h3 class = "footertitles">Legal</h3>
+                <ul>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Cookies</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+                </ul>
+			</div>
+		
+		</div>
+
+	</footer>
+        
+      <!--        Means the JS file can be imported so the image carousel and burger menu button work on nav bar-->
+
+    
+        <script src = "assets/js/main.js"></script>
+
+         </body>
+   
+        
+</html>  
+        
+        
+        
+        
+        
+        
+        
+        
